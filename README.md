@@ -271,36 +271,6 @@ And number formats:
 
 ---
 
-## Customization & Extension
-
-### Adding New Field Patterns
-
-Edit `FIELD_PATTERNS` dictionary in `insurance_parser.py`:
-
-```python
-FIELD_PATTERNS = {
-    'your_custom_field': [
-        r'Custom\s+Field\s+Name[:\s]+(?:₹|Rs\.?|INR)?\s*([\d,]+\.?\d*)',
-        r'Alternative\s+Pattern[:\s]+(?:₹|Rs\.?|INR)?\s*([\d,]+\.?\d*)',
-    ],
-    # ... existing patterns
-}
-```
-
-### Adding New Categories
-
-Extend the `FieldCategory` enum:
-
-```python
-class FieldCategory(Enum):
-    # Existing categories...
-    YOUR_CATEGORY = "your_category"
-```
-
-Update the `categorize_field()` method accordingly.
-
----
-
 ## Testing with Sample Data
 
 A complete sample insurance policy is provided in `sample_data/sample_insurance_policy.txt`. This document includes:

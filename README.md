@@ -356,9 +356,7 @@ The parser includes robust error handling:
 
 1. **Batch Processing:** Process multiple documents in parallel
 2. **Precompile Patterns:** Regex patterns are compiled once during initialization
-3. **Memory Management:** Parser is stateless—create new instances for each document
+3. **Memory Management:** Parser is stateless-create new instances for each document
 4. **Streaming:** For very large documents, process line-by-line
 
 ---
-
-**End of README**
